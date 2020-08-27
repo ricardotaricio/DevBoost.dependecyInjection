@@ -27,8 +27,12 @@ namespace DevBoost.dependencyinjection
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
             services.AddScoped<IAlunoService, AlunoService>();
             services.AddScoped<IAlunoRepository, AlunoRepository>();
+
+            services.AddScoped<ICursoService, CursoService>();
+            services.AddScoped<ICursoRepository, CursoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
